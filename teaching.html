@@ -22,10 +22,15 @@
         nav a { color:rgba(255,255,255,.85); display:block; font-size:.95rem; font-weight:500; letter-spacing:.5px; padding:16px 20px; text-transform:uppercase; }
         nav a:hover { background:rgba(255,255,255,.1); color:#fff; }
         main { margin:0 auto; max-width:960px; padding:64px 24px 80px; }
-        .course { background:var(--bg-card); border:1px solid var(--border-light); border-radius:8px; box-shadow:var(--shadow-sm); margin-bottom:28px; overflow:hidden; }
-        .course-header { border-bottom:1px solid var(--border-light); padding:28px 30px 22px; }
+        .course { background:var(--bg-card); border:1px solid var(--border-light); border-radius:8px; box-shadow:var(--shadow-sm); margin-bottom:16px; overflow:hidden; }
+        .course-header { align-items:center; cursor:pointer; display:flex; justify-content:space-between; list-style:none; padding:24px 30px; transition:background .2s; }
+        .course-header::-webkit-details-marker { display:none; }
+        .course-header:hover { background:#f8fafc; }
+        .course[open] .course-header { border-bottom:1px solid var(--border-light); }
         .course-header h2 { font-size:1.45rem; margin-bottom:6px; }
         .course-meta { color:var(--text-muted); font-size:.95rem; }
+        .course-chevron { color:var(--text-muted); flex:0 0 auto; margin-left:20px; transition:transform .2s; }
+        .course[open] .course-chevron { color:var(--accent-blue); transform:rotate(180deg); }
         .course-body { padding:8px 30px 22px; }
         .material { border-bottom:1px solid var(--border-light); padding:18px 0; }
         .material:last-child { border-bottom:0; }
@@ -35,7 +40,7 @@
         .material-link:hover { background:var(--accent-blue); border-color:var(--accent-blue); color:#fff; }
         .pending { color:var(--text-muted); font-size:.95rem; padding:24px 30px 28px; }
         footer { border-top:1px solid var(--border-light); color:var(--text-muted); font-size:.9rem; padding:26px 24px; text-align:center; }
-        @media (max-width:600px) { h1 { font-size:1.8rem; } nav a { font-size:.82rem; padding:14px 10px; } .course-header,.course-body { padding-left:20px; padding-right:20px; } }
+        @media (max-width:600px) { h1 { font-size:1.8rem; } nav a { font-size:.82rem; padding:14px 10px; } .course-header,.course-body { padding-left:20px; padding-right:20px; } .course-header h2 { font-size:1.2rem; } }
     </style>
 </head>
 <body>
@@ -44,13 +49,16 @@
         <h1>Teaching</h1>
         <p>Department of Finance, National Chung Cheng University</p>
     </header>
-    <nav><div class="nav-inner"><a href="index.html">Home</a><a href="#statistics-i">Statistics I</a><a href="#financial-engineering">Financial Engineering</a></div></nav>
+    <nav><div class="nav-inner"><a href="index.html">Home</a></div></nav>
     <main>
-        <section id="statistics-i" class="course">
-            <div class="course-header">
-                <h2>Fall 2026 Statistics I</h2>
-                <div class="course-meta">Undergraduate | Department of Finance</div>
-            </div>
+        <details id="statistics-i" class="course">
+            <summary class="course-header">
+                <div>
+                    <h2>Fall 2026 Statistics I</h2>
+                    <div class="course-meta">Undergraduate | Department of Finance</div>
+                </div>
+                <i class="fas fa-chevron-down course-chevron" aria-hidden="true"></i>
+            </summary>
             <div class="course-body">
                 <div class="material">
                     <div class="material-title">Course Syllabus</div>
@@ -73,14 +81,17 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="financial-engineering" class="course">
-            <div class="course-header">
-                <h2>Fall 2026 Financial Engineering</h2>
-                <div class="course-meta">Graduate | Department of Finance</div>
-            </div>
+        </details>
+        <details id="financial-engineering" class="course">
+            <summary class="course-header">
+                <div>
+                    <h2>Fall 2026 Financial Engineering</h2>
+                    <div class="course-meta">Graduate | Department of Finance</div>
+                </div>
+                <i class="fas fa-chevron-down course-chevron" aria-hidden="true"></i>
+            </summary>
             <div class="pending">Course materials are being prepared.</div>
-        </section>
+        </details>
     </main>
     <footer>© 2026 Zong-Wei Yeh</footer>
 </body>
