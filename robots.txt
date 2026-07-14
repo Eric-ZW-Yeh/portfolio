@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eric-zw-yeh.github.io/portfolio/sitemap.xml
