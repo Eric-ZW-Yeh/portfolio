@@ -27,15 +27,15 @@
         .course-header h2 { font-size:1.45rem; margin-bottom:6px; }
         .course-meta { color:var(--text-muted); font-size:.95rem; }
         .course-body { padding:8px 30px 22px; }
-        .material { align-items:center; border-bottom:1px solid var(--border-light); display:flex; gap:16px; justify-content:space-between; padding:18px 0; }
+        .material { border-bottom:1px solid var(--border-light); padding:18px 0; }
         .material:last-child { border-bottom:0; }
         .material-title { color:var(--primary-navy); font-weight:600; }
-        .material-detail { color:var(--text-muted); font-size:.9rem; margin-top:2px; }
-        .open-link { align-items:center; border:1px solid var(--accent-blue); border-radius:5px; display:inline-flex; flex:0 0 auto; font-size:.9rem; font-weight:600; gap:7px; padding:8px 12px; }
-        .open-link:hover { background:var(--accent-blue); color:#fff; }
+        .material-links { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+        .material-link { align-items:center; background:#f8fafc; border:1px solid var(--border-light); border-radius:5px; color:var(--primary-light); display:inline-flex; font-size:.85rem; font-weight:600; gap:6px; padding:6px 10px; }
+        .material-link:hover { background:var(--accent-blue); border-color:var(--accent-blue); color:#fff; }
         .pending { color:var(--text-muted); font-size:.95rem; padding:24px 30px 28px; }
         footer { border-top:1px solid var(--border-light); color:var(--text-muted); font-size:.9rem; padding:26px 24px; text-align:center; }
-        @media (max-width:600px) { h1 { font-size:1.8rem; } nav a { font-size:.82rem; padding:14px 10px; } .course-header,.course-body { padding-left:20px; padding-right:20px; } .material { align-items:flex-start; flex-direction:column; gap:10px; } }
+        @media (max-width:600px) { h1 { font-size:1.8rem; } nav a { font-size:.82rem; padding:14px 10px; } .course-header,.course-body { padding-left:20px; padding-right:20px; } }
     </style>
 </head>
 <body>
@@ -53,24 +53,24 @@
             </div>
             <div class="course-body">
                 <div class="material">
-                    <div><div class="material-title">Course Syllabus</div><div class="material-detail">Fall 2026</div></div>
-                    <a class="open-link" href="teaching-materials/statistics-i/Syllabus_Fall2026.pdf" target="_blank" rel="noopener">Open PDF <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <div class="material-title">Course Syllabus</div>
+                    <div class="material-links">
+                        <a class="material-link" href="teaching-materials/statistics-i/Syllabus_Fall2026.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Syllabus</a>
+                    </div>
                 </div>
                 <div class="material">
-                    <div><div class="material-title">S01: Introduction to Statistics</div><div class="material-detail">Slides</div></div>
-                    <a class="open-link" href="teaching-materials/statistics-i/S01_slides.pdf" target="_blank" rel="noopener">Open PDF <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <div class="material-title">S01: Introduction to Statistics</div>
+                    <div class="material-links">
+                        <a class="material-link" href="teaching-materials/statistics-i/S01_slides.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Slides</a>
+                        <a class="material-link" href="teaching-materials/statistics-i/S01_notes_blank.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Lecture Notes</a>
+                    </div>
                 </div>
                 <div class="material">
-                    <div><div class="material-title">S01: Introduction to Statistics</div><div class="material-detail">Fill-in lecture notes</div></div>
-                    <a class="open-link" href="teaching-materials/statistics-i/S01_notes_blank.pdf" target="_blank" rel="noopener">Open PDF <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="material">
-                    <div><div class="material-title">S02: Describing Data: Graphical and Numerical</div><div class="material-detail">Slides</div></div>
-                    <a class="open-link" href="teaching-materials/statistics-i/S02_slides.pdf" target="_blank" rel="noopener">Open PDF <i class="fas fa-arrow-up-right-from-square"></i></a>
-                </div>
-                <div class="material">
-                    <div><div class="material-title">S02: Describing Data: Graphical and Numerical</div><div class="material-detail">Fill-in lecture notes</div></div>
-                    <a class="open-link" href="teaching-materials/statistics-i/S02_notes_blank.pdf" target="_blank" rel="noopener">Open PDF <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <div class="material-title">S02: Describing Data: Graphical and Numerical</div>
+                    <div class="material-links">
+                        <a class="material-link" href="teaching-materials/statistics-i/S02_slides.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Slides</a>
+                        <a class="material-link" href="teaching-materials/statistics-i/S02_notes_blank.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Lecture Notes</a>
+                    </div>
                 </div>
             </div>
         </section>
