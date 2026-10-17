@@ -137,6 +137,7 @@
         
         nav a {
             display: block;
+            position: relative;
             padding: 18px 20px;
             color: rgba(255,255,255,0.85);
             font-weight: 500;
@@ -146,9 +147,31 @@
             transition: all 0.3s;
         }
         
-        nav a:hover { 
-            color: #fff; 
+        nav a:hover {
+            color: #fff;
             background: rgba(255,255,255,0.1);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: 9px;
+            height: 2px;
+            border-radius: 2px;
+            background: #ffffff;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.2s ease;
+        }
+
+        nav a.active {
+            color: #ffffff;
+        }
+
+        nav a.active::after {
+            transform: scaleX(1);
         }
 
         /* --- 6. SECTIONS --- */
@@ -222,8 +245,8 @@
         /* --- 8. PUBLICATION CARDS --- */
         .paper-card {
             background: var(--bg-card);
-            padding: 28px;
-            margin-bottom: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
             border-radius: 12px;
             border: 1px solid var(--border-light);
             border-left: 4px solid var(--accent-blue);
@@ -306,6 +329,7 @@
             cursor: pointer;
             padding: 5px 0;
             margin-top: 12px;
+            vertical-align: middle;
             display: inline-flex;
             align-items: center;
             transition: color 0.2s;
@@ -316,10 +340,12 @@
         .btn-abstract.active i { transform: rotate(180deg); }
 
         .paper-resources {
-            display: flex;
+            display: inline-flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 12px;
+            margin-right: 14px;
+            vertical-align: middle;
         }
 
         .paper-resource-link {
@@ -406,6 +432,9 @@
 
             nav ul { flex-wrap: wrap; padding: 10px 0; }
             nav a { padding: 10px 15px; font-size: 0.85rem; }
+            nav a::after { left: 15px; right: 15px; bottom: 4px; }
+
+            .paper-card { padding: 20px; }
             
             .contact-grid { grid-template-columns: 1fr; gap: 40px; }
             .tab-content { padding: 25px; }
@@ -899,7 +928,6 @@
         function toggleAbstract(btn) {
             var card = btn.closest('.paper-card');
             var content = card.querySelector('.abstract-content');
-            var icon = btn.querySelector('i');
 
             if (content.classList.contains('open')) {
                 content.style.maxHeight = null;
@@ -907,12 +935,68 @@
                 btn.classList.remove('active');
                 btn.innerHTML = 'Read Abstract <i class="fas fa-chevron-down"></i>';
             } else {
+                document.querySelectorAll('.abstract-content.open').forEach(function(openContent) {
+                    openContent.style.maxHeight = null;
+                    openContent.classList.remove('open');
+
+                    var openButton = openContent.closest('.paper-card').querySelector('.btn-abstract');
+                    if (openButton) {
+                        openButton.classList.remove('active');
+                        openButton.innerHTML = 'Read Abstract <i class="fas fa-chevron-down"></i>';
+                    }
+                });
+
                 content.classList.add('open');
                 content.style.maxHeight = content.scrollHeight + 40 + "px";
                 btn.classList.add('active');
                 btn.innerHTML = 'Hide Abstract <i class="fas fa-chevron-up"></i>';
             }
         }
+
+        var sectionLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+        var trackedSections = sectionLinks.map(function(link) {
+            return {
+                link: link,
+                section: document.querySelector(link.getAttribute('href'))
+            };
+        }).filter(function(item) {
+            return item.section;
+        });
+
+        function updateActiveSection() {
+            var navHeight = document.querySelector('nav').offsetHeight;
+            var marker = window.scrollY + navHeight + 80;
+            var activeItem = null;
+
+            trackedSections.forEach(function(item) {
+                if (item.section.offsetTop <= marker) {
+                    activeItem = item;
+                }
+            });
+
+            trackedSections.forEach(function(item) {
+                var isActive = item === activeItem;
+                item.link.classList.toggle('active', isActive);
+                if (isActive) {
+                    item.link.setAttribute('aria-current', 'location');
+                } else {
+                    item.link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        var sectionUpdateQueued = false;
+        window.addEventListener('scroll', function() {
+            if (!sectionUpdateQueued) {
+                window.requestAnimationFrame(function() {
+                    updateActiveSection();
+                    sectionUpdateQueued = false;
+                });
+                sectionUpdateQueued = true;
+            }
+        }, { passive: true });
+
+        updateActiveSection();
     </script>
 </body>
 </html>
