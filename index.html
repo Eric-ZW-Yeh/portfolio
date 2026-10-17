@@ -245,7 +245,7 @@
             margin-bottom: 10px; 
             line-height: 1.4;
         }
-        .paper-title:hover { color: var(--accent-blue); text-decoration: underline; }
+        a.paper-title:hover { color: var(--accent-blue); text-decoration: underline; }
         
         .paper-authors { font-size: 0.95rem; color: var(--text-main); margin-bottom: 6px; }
         
@@ -325,13 +325,24 @@
         .paper-resource-link {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            color: var(--accent-blue);
-            font-size: 0.9rem;
-            font-weight: 600;
+            gap: 8px;
+            padding: 7px 12px;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
         }
 
-        .paper-resource-link:hover { color: var(--primary-navy); }
+        .paper-resource-link:hover {
+            background: var(--primary-navy);
+            border-color: var(--primary-navy);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
 
 
         /* --- 9. CONTACT --- */
@@ -564,10 +575,7 @@
             <h2>Working Papers</h2>
 
             <div class="paper-card">
-				<a href="https://drive.google.com/file/d/1ajQWkReqhX0urWASBxlRvXwbcEqFf1kd/view?usp=share_link" class="paper-title" target="_blank">
-                    Carbon Policy Paradox: The Divergent Impacts of Short-term versus Long-term Policies
-                </a>
-                <!-- <span class="paper-title">Carbon Policy Paradox: The Divergent Impacts of Short-term versus Long-term Policies</span> -->
+                <span class="paper-title">Carbon Policy Paradox: The Divergent Impacts of Short-term versus Long-term Policies</span>
                 <p class="paper-authors">with I-Hsuan Ethan Chiang and Shih-Kuei Lin</p>
                 <p style="font-size: 0.9rem; color: #64748b; margin-top: 8px;">
                     <i class="fas fa-bullhorn" style="margin-right:5px; color:#94a3b8;"></i>
@@ -576,6 +584,9 @@
                 <div class="tag-container">
                     <span class="tag highlight">Job Market Paper</span>
                     <span class="tag highlight">Corresponding Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="https://drive.google.com/file/d/1ajQWkReqhX0urWASBxlRvXwbcEqFf1kd/view?usp=share_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -593,7 +604,7 @@
                     <span class="tag highlight">First Author</span>
                 </div>
                 <div class="paper-resources">
-                    <a class="paper-resource-link" href="research-materials/working-papers/beyond-emissions.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a class="paper-resource-link" href="research-materials/working-papers/beyond-emissions.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -605,16 +616,16 @@
             </div>
 
             <div class="paper-card">
-					<a href="https://drive.google.com/file/d/19qwgbwuWejfhB9p-5JJPCoRH_nwD1b1L/view?usp=share_link" class="paper-title" target="_blank">
-                    Altruism in P2P Lending: Evidence from Lending Club
-                </a>
-                <!-- <span class="paper-title">Altruism in P2P Lending: Evidence from Lending Club</span> -->
+                <span class="paper-title">Altruism in P2P Lending: Evidence from Lending Club</span>
                 <p class="paper-authors">with Dong-Jie Fang, Chien-Hsiu Lin, and Shih-Kuei Lin</p>
                 <p class="paper-journal">Revise and Resubmit to Review of Quantitative Finance and Accounting (NSTC ATier 2)</p>
                 <p style="font-size: 0.9rem; color: #64748b; margin-top: 8px;">
                     <i class="fas fa-bullhorn" style="margin-right:5px; color:#94a3b8;"></i>
                     Presentations: EFMA, EasternFA, TRIA, TFA
                 </p>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="https://drive.google.com/file/d/19qwgbwuWejfhB9p-5JJPCoRH_nwD1b1L/view?usp=share_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
+                </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
                     <div class="abstract-text">
@@ -652,7 +663,7 @@
                     <span class="tag highlight">First Author</span>
                 </div>
                 <div class="paper-resources">
-                    <a class="paper-resource-link" href="research-materials/working-papers/index-option-predictability-taiwan.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a class="paper-resource-link" href="research-materials/working-papers/index-option-predictability-taiwan.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -677,10 +688,7 @@
             </div>
 
             <div class="paper-card">
-					<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5421274" class="paper-title" target="_blank">
-                    Volatility Decay and Arbitrage in Leveraged ETFs: Evidence from the US and Japan
-                </a>
-                <!-- <span class="paper-title">Volatility Decay and Arbitrage in Leveraged ETFs: Evidence from the US and Japan</span> -->
+                <span class="paper-title">Volatility Decay and Arbitrage in Leveraged ETFs: Evidence from the US and Japan</span>
                 <p class="paper-authors">with Cheng-To Lin, Shih-Kuei Lin, and George Y. Wang</p>
                 <p style="font-size: 0.9rem; color: #64748b; margin-top: 8px;">
                      <i class="fas fa-bullhorn" style="margin-right:5px; color:#94a3b8;"></i>
@@ -688,6 +696,9 @@
                 </p>
 				<div class="tag-container">
                     <span class="tag highlight">Corresponding Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5421274" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -699,13 +710,13 @@
             </div>
 
             <div class="paper-card">
-					<a href="https://drive.google.com/file/d/1pWvF218zAw6NKOwRF0zmnWwwY16lMEJD/view?usp=share_link" class="paper-title" target="_blank">
-                    Risk Converge and Procyclicality in Futures Margin System: Evidence from Taiwan Stock Exchange Index Futures
-                </a>
-                <!-- <span class="paper-title">Risk Converge and Procyclicality in Futures Margin System: Evidence from Taiwan Stock Exchange Index Futures</span> -->
+                <span class="paper-title">Risk Converge and Procyclicality in Futures Margin System: Evidence from Taiwan Stock Exchange Index Futures</span>
                 <p class="paper-authors">with Ting-Da Yan, Ting-Fu Chen, and Chien-Hsiu Lin</p>
                 <div class="tag-container">
                     <span class="tag highlight">First Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="https://drive.google.com/file/d/1pWvF218zAw6NKOwRF0zmnWwwY16lMEJD/view?usp=share_link" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -723,7 +734,7 @@
                     <span class="tag highlight">First Author</span>
                 </div>
                 <div class="paper-resources">
-                    <a class="paper-resource-link" href="research-materials/working-papers/reserve-adequacy-federal-funds-futures.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a class="paper-resource-link" href="research-materials/working-papers/reserve-adequacy-federal-funds-futures.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -753,7 +764,7 @@
                     <span class="tag highlight">First Author</span>
                 </div>
                 <div class="paper-resources">
-                    <a class="paper-resource-link" href="research-materials/working-papers/price-of-weather.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                    <a class="paper-resource-link" href="research-materials/working-papers/price-of-weather.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
@@ -765,15 +776,15 @@
             </div>
 
             <div class="paper-card">
-					<a href="https://drive.google.com/file/d/12VrJGFZIxfvYYKLQdCTgbVDl1-oX3YSC/view?usp=sharing" class="paper-title" target="_blank">
-                    Option-Implied Probability Distortions and Stock Return Predictability
-                </a>
-                <!-- <span class="paper-title">Option-Implied Probability Distortions and Stock Return Predictability</span> -->
+                <span class="paper-title">Option-Implied Probability Distortions and Stock Return Predictability</span>
                 <p class="paper-authors">with Ting-Xuan Wang, Wei-Yu Kuo, and Shih-Kuei Lin</p>
                 <p style="font-size: 0.9rem; color: #64748b; margin-top: 8px;">
                      <i class="fas fa-bullhorn" style="margin-right:5px; color:#94a3b8;"></i>
                      Presentations: TFA, FeAT, PBFEAM
                 </p>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="https://drive.google.com/file/d/12VrJGFZIxfvYYKLQdCTgbVDl1-oX3YSC/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
+                </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
                     <div class="abstract-text">
@@ -784,12 +795,12 @@
             </div>
 
             <div class="paper-card">
-				<a href="https://drive.google.com/file/d/11puxyh1L1xV5EEKIg6hRZP1BNh6L15K0/view?usp=sharing" class="paper-title" target="_blank">
-                    Do Investors Care About Carbon Higher Moment Risks
-                </a>
-                <!-- <span class="paper-title">Do Investors Care About Carbon Higher Moment Risks</span> -->
+                <span class="paper-title">Do Investors Care About Carbon Higher Moment Risks</span>
                 <div class="tag-container">
                     <span class="tag highlight">Single Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="https://drive.google.com/file/d/11puxyh1L1xV5EEKIg6hRZP1BNh6L15K0/view?usp=sharing" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Working Paper</a>
                 </div>
                 <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
                 <div class="abstract-content">
