@@ -315,6 +315,24 @@
         .btn-abstract i { margin-left: 6px; transition: transform 0.3s ease; }
         .btn-abstract.active i { transform: rotate(180deg); }
 
+        .paper-resources {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .paper-resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .paper-resource-link:hover { color: var(--primary-navy); }
+
 
         /* --- 9. CONTACT --- */
         .contact-grid {
@@ -397,7 +415,7 @@
                 <a href="mailto:zweyeh@ccu.edu.tw" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://scholar.google.com/citations?user=Gp7MfYwAAAAJ&hl=en&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="http://www.github.com/utperic" title="Github"><i class="fab fa-github"></i></a>
-                <a href="ZWY_resume_2026-08-08-v2.pdf" title="Download CV"><i class="fas fa-file-pdf"></i></a>
+                <a href="ZWY_resume_2026-10-18.pdf" title="Download CV"><i class="fas fa-file-pdf"></i></a>
             </div>
         </div>
     </header>
@@ -566,6 +584,24 @@
             </div>
 
             <div class="paper-card">
+                <span class="paper-title">Beyond Emissions: Regulatory Carbon Positions and Stock Returns</span>
+                <p class="paper-authors">with Wei-Che Tsai, Austin Liu, and Jie Luo</p>
+                <div class="tag-container">
+                    <span class="tag highlight">First Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="research-materials/working-papers/beyond-emissions.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+                <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
+                <div class="abstract-content">
+                    <div class="abstract-text">
+                        <strong>Abstract:</strong><br>
+                        The allocation shortfall, the share of a firm’s verified emissions not covered by its free allowances under the EU Emissions Trading System, measures how tightly the cap binds the firm relative to the allocation the regulator grants. Among European listed firms outside the utility sector, firms whose emissions persistently fall short of their allocation earn higher subsequent returns than firms whose emissions persistently exceed it: a value-weighted spread of 5.8% per year over 2009–2024, with an alpha of 6.1% per year after the Fama–French five factors and momentum. The spread is not explained by carbon-price exposure or carbon costs, and it is concentrated among firms for which the system is economically small. Controlling for firm characteristics, low-shortfall firms subsequently beat analysts’ earnings forecasts. The evidence is consistent with investors and analysts not fully incorporating the information in firms’ regulatory carbon positions, rather than with compensation for carbon-price risk.
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper-card">
 					<a href="https://drive.google.com/file/d/19qwgbwuWejfhB9p-5JJPCoRH_nwD1b1L/view?usp=share_link" class="paper-title" target="_blank">
                     Altruism in P2P Lending: Evidence from Lending Club
                 </a>
@@ -588,7 +624,7 @@
             <div class="paper-card">
                 <span class="paper-title">Implied Volatility Surface Predictability: Evidence from TAIFEX Options</span>
                 <p class="paper-authors">with Yen-Hsun Juan and Shih-Kuei Lin</p>
-                <p class="paper-journal">Submitted to Pacific-Basin Finance Journal (NSTC ATier 2)</p>
+                <p class="paper-journal">Revise and Resubmit at Pacific-Basin Finance Journal (NSTC ATier 2)</p>
                 <p style="font-size: 0.9rem; color: #64748b; margin-top: 8px;">
                      <i class="fas fa-bullhorn" style="margin-right:5px; color:#94a3b8;"></i>
                      Presentations: FeAT
@@ -608,9 +644,19 @@
             <div class="paper-card">
                 <span class="paper-title">The Boundaries of Index Option Return Predictability: Evidence from Taiwan</span>
                 <p class="paper-authors">with Pin-Chi Chen, Xian-Ji Kuang, and Tzu-Chieh Lin</p>
-                <p class="paper-journal">Submitted to Pacific-Basin Finance Journal (NSTC A Tier 2)</p>
+                <p class="paper-journal">Revise and Resubmit at Pacific-Basin Finance Journal (NSTC A Tier 2)</p>
                 <div class="tag-container">
                     <span class="tag highlight">First Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="research-materials/working-papers/index-option-predictability-taiwan.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+                <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
+                <div class="abstract-content">
+                    <div class="abstract-text">
+                        <strong>Abstract:</strong><br>
+                        Out-of-sample evidence on index option return predictability comes almost entirely from U.S. data. We provide, to our knowledge, the first systematic pseudo-real-time out-of-sample evaluation of monthly delta-hedged index-option return forecasts in an Asia-Pacific market, using recursive forecasts of dividend-inclusive returns on at-the-money Taiwan index (TXO) puts over 2002–2022; the mean put premium is about −0.71% per month. What predictability we find runs through the variance risk premium, and it is episodic rather than steady. Realized stock variance (SVAR), the state variable that tracks the premium’s physical leg, is the only one of 164 candidates whose full-sample slope survives the Holm correction; its out-of-sample R² of 11.03% over the 2007–2022 evaluation window (Clark–West p = 0.008) is earned mostly in crisis months and largely disappears after 2015. In a frozen 2023–2025 holdout the decay continues: the put premium shrinks to −0.24% per month and the SVAR forecast falls behind the historical mean. Point estimates concentrate the signal in puts, though formal put–call tests cannot separate the two sides, and the incremental value of predictive timing is economically negligible. Entry-date implied variance fits the target return largely by construction, so we analyze it separately as a channel variable rather than include it in the exogenous-predictor comparisons. Same-strike puts are persistently richer than calls—a wedge that closely tracks the index-futures basis, with a near-unit slope and an economically negligible mean gap: a market-wide carry phenomenon consistent with downside-insurance demand, though alternative carry-based explanations remain open.
+                    </div>
                 </div>
             </div>
 
@@ -668,10 +714,20 @@
             </div>
 
             <div class="paper-card">
-                <span class="paper-title">Reserve Adequacy: An Unspanned Risk Factor in Overnight Funding Markets</span>
+                <span class="paper-title">Unspanned Reserve Adequacy and the Term Premium in Federal Funds Futures</span>
                 <p class="paper-authors">with Dong-Jie Fang</p>
                 <div class="tag-container">
                     <span class="tag highlight">First Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="research-materials/working-papers/reserve-adequacy-federal-funds-futures.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+                <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
+                <div class="abstract-content">
+                    <div class="abstract-text">
+                        <strong>Abstract:</strong><br>
+                        The floor system separates the size of the Federal Reserve’s balance sheet from control of the policy rate. We ask whether the separation extends to the price of risk: whether the quantity of reserves is priced in the market for the policy rate. In federal funds futures, reserve adequacy, measured as reserve balances relative to GDP, is almost invisible in the current curve yet forecasts the curve’s evolution, in sample and out of sample. An arbitrage-free affine model in which reserve adequacy drives the physical but not the risk-neutral dynamics attributes about four-fifths of the variance of the twelve-month term premium to it: a one-standard-deviation decline in reserve adequacy raises the premium by 41 basis points, and the premium widens as reserves run off and narrows as they are added. The overnight market shows why. A given reserve drain moves the funds rate only when reserves are scarce, which is what gives reserve adequacy its importance; the futures curve ignores the drains and responds to the persistent state that governs their effect. The compensation embedded in federal funds futures varies with this state, rising as reserve balances approach the steep region of reserve demand.
+                    </div>
                 </div>
             </div>
 
@@ -692,6 +748,16 @@
                 <p class="paper-authors">with Dong-Jie Fang</p>
                 <div class="tag-container">
                     <span class="tag highlight">First Author</span>
+                </div>
+                <div class="paper-resources">
+                    <a class="paper-resource-link" href="research-materials/working-papers/price-of-weather.pdf?v=20261018" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> PDF</a>
+                </div>
+                <button class="btn-abstract" onclick="toggleAbstract(this)">Read Abstract <i class="fas fa-chevron-down"></i></button>
+                <div class="abstract-content">
+                    <div class="abstract-text">
+                        <strong>Abstract:</strong><br>
+                        The El Niño–Southern Oscillation (ENSO) is declared by a public agency months before its economic effects arrive, and is almost invisible in commodity futures curves, yet it forecasts the returns those curves deliver. In nine commodities over 1990–2026, a 1°C higher Oceanic Niño Index lowers expected one-month excess returns on the six weather-sensitive commodities by about 16% per year, while the three metals, whose supply does not run through growing or heating conditions, show none. The predictability is concentrated in the cold season, at horizons of a few months, and in La Niña states; commercial hedgers shift their positions in the same states. A no-arbitrage model in which ENSO shifts the distribution of future prices without entering the pricing equation implies a premium that declines with maturity, a profile that the reduced-form evidence does not impose and the data do not reject. Weather is priced in commodity futures, not in the curve but in the returns.
+                    </div>
                 </div>
             </div>
 
@@ -764,7 +830,7 @@
                 
                 <div class="contact-right" style="background: #f1f5f9; padding: 30px; border-radius: 12px; text-align:center;">
                    <p style="margin-bottom: 20px; font-weight: 500;">Feel free to reach out for research collaborations or to request my full CV.</p>
-                   <a href="ZWY_resume_2026-08-08-v2.pdf" class="btn-download">
+                   <a href="ZWY_resume_2026-10-18.pdf" class="btn-download">
                        <i class="fas fa-download" style="margin-right:8px;"></i> Download Full Resume
                    </a>
                 </div>
