@@ -372,9 +372,10 @@
 
         .grant-meta {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px 18px;
-            margin: 8px 0 16px;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0 0;
             color: var(--text-muted);
             font-size: 0.95rem;
         }
@@ -388,14 +389,14 @@
         .grant-resource-link {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 13px;
-            border: 1px solid #bfdbfe;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
-            background: #eff6ff;
-            color: var(--primary-navy);
+            background: transparent;
+            color: var(--text-muted);
             font-size: 0.85rem;
-            font-weight: 700;
             line-height: 1;
             transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
         }
@@ -910,10 +911,10 @@
                 <p class="paper-authors"><strong>Principal Investigator</strong> · National Science and Technology Council (NSTC), Taiwan</p>
                 <div class="grant-meta">
                     <span><i class="far fa-calendar-alt"></i> November 2026 – October 2027</span>
+                    <a class="grant-resource-link" href="https://docs.google.com/spreadsheets/d/1NTmKSQK9HMfmfUrTYHdOkvt6cFz4O9fcuxaZP6TaqzU/edit" target="_blank" rel="noopener" title="Open private grant budget sheet" aria-label="Open private grant budget sheet">
+                        <i class="fas fa-table" aria-hidden="true"></i>
+                    </a>
                 </div>
-                <a class="grant-resource-link" href="https://docs.google.com/spreadsheets/d/1NTmKSQK9HMfmfUrTYHdOkvt6cFz4O9fcuxaZP6TaqzU/edit" target="_blank" rel="noopener" title="Open private budget tracker">
-                    <i class="fas fa-lock"></i> Budget Tracker
-                </a>
             </div>
         </div>
     </section>
