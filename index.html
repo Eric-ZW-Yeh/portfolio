@@ -370,6 +370,43 @@
             transform: translateY(-1px);
         }
 
+        .grant-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin: 8px 0 16px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .grant-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .grant-resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 13px;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            background: #eff6ff;
+            color: var(--primary-navy);
+            font-size: 0.85rem;
+            font-weight: 700;
+            line-height: 1;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .grant-resource-link:hover {
+            background: var(--primary-navy);
+            border-color: var(--primary-navy);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
 
         /* --- 9. CONTACT --- */
         .contact-grid {
@@ -455,7 +492,7 @@
                 <a href="mailto:zweyeh@ccu.edu.tw" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://scholar.google.com/citations?user=Gp7MfYwAAAAJ&hl=en&oi=ao" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="http://www.github.com/utperic" title="Github"><i class="fab fa-github"></i></a>
-                <a href="ZWY_resume_2026-10-18.pdf" title="Download CV"><i class="fas fa-file-pdf"></i></a>
+                <a href="ZWY_resume_2026-10-21.pdf" title="Download CV"><i class="fas fa-file-pdf"></i></a>
             </div>
         </div>
     </header>
@@ -465,6 +502,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#publications">Publications</a></li>
             <li><a href="#working-papers">Working Papers</a></li>
+            <li><a href="#research-grants">Grants</a></li>
             <li><a href="teaching.html">Teaching</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -863,6 +901,23 @@
         </div>
     </section>
 
+    <section id="research-grants">
+        <div class="container">
+            <h2>Research Grants</h2>
+
+            <div class="paper-card">
+                <span class="paper-title">Unspanned Reserve Adequacy and the Term Premium in Federal Funds Futures</span>
+                <p class="paper-authors"><strong>Principal Investigator</strong> · National Science and Technology Council (NSTC), Taiwan</p>
+                <div class="grant-meta">
+                    <span><i class="far fa-calendar-alt"></i> November 2026 – October 2027</span>
+                </div>
+                <a class="grant-resource-link" href="https://docs.google.com/spreadsheets/d/1NTmKSQK9HMfmfUrTYHdOkvt6cFz4O9fcuxaZP6TaqzU/edit" target="_blank" rel="noopener" title="Open private budget tracker">
+                    <i class="fas fa-lock"></i> Budget Tracker
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
@@ -894,7 +949,7 @@
                 
                 <div class="contact-right" style="background: #f1f5f9; padding: 30px; border-radius: 12px; text-align:center;">
                    <p style="margin-bottom: 20px; font-weight: 500;">Feel free to reach out for research collaborations or to request my full CV.</p>
-                   <a href="ZWY_resume_2026-10-18.pdf" class="btn-download">
+                   <a href="ZWY_resume_2026-10-21.pdf" class="btn-download">
                        <i class="fas fa-download" style="margin-right:8px;"></i> Download Full Resume
                    </a>
                 </div>
